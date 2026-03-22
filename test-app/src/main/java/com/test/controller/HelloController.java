@@ -11,7 +11,7 @@ public class HelloController {
     @GetMapping("/hello")
     public ModelAndView hello(@RequestParam(value = "name", defaultValue = "World") String name) {
         ModelAndView mv = new ModelAndView("hello");
-        mv.addObject("name", name);
+        mv.addModel("name", name);
         return mv;
     }
     
